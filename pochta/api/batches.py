@@ -154,7 +154,7 @@ class Batches:
         """
         url = '/1.0/shipment'
 
-        res = self._client.request(HTTPMethod.GET, url, data=shipment_ids)
+        res = self._client.request(HTTPMethod.DELETE, url, data=shipment_ids)
         return res.json()
 
     def get_batch_orders_info(self, batch_name: str,
